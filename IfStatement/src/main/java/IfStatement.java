@@ -18,9 +18,9 @@ public class IfStatement {
      */
     public int ifExample(boolean bool, int x, int y){
         
-        if(bool=(x!=y)){ return x;}
+        if(bool=(x==y)){ return x;}
         
-     else  {return y;}
+    else{return 1;}
         
              
         

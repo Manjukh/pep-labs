@@ -23,7 +23,9 @@ public class BankService {
      * @param amount the amount to be deposited.
      */
     public void deposit(double amount){
-
+        double newBalance = balance + amount;
+        balance = newBalance;	
+        
     }
 
     /**
@@ -32,7 +34,9 @@ public class BankService {
      * @param amount the amount to be withdrawn.
      */
     public void withdraw(double amount){
-
+        double newBalance = balance - amount;
+        balance = newBalance;	
+    
     }
 
     /**

@@ -1,3 +1,5 @@
+
+
 /**
  * This service class is intended to contain the basic logic for deposits and withdrawls to a bank account
  * Separating menu logic and bank logic is good for two reasons: it makes both classes as simple
@@ -19,19 +21,26 @@ public class BankService {
         this.balance = 0;
     }
     /**
-     * TODO: implement functionality to increase the user's balance by amount.
+  //   *  implement functionality to increase the user's balance by amount.
      * @param amount the amount to be deposited.
      */
     public void deposit(double amount){
+       this.balance += amount;
 
     }
 
     /**
-     * TODO: implement functionality to decrease the user's balance by an amount.
+   //  *  implement functionality to decrease the user's balance by an amount.
      * If a withdrawl would result in the user having a negative balance, the withdrawl should not occur.
      * @param amount the amount to be withdrawn.
      */
     public void withdraw(double amount){
+       
+      if((amount < 0.0)||(this.balance < amount))
+      return;
+      else
+           this.balance= this.balance - amount;
+
 
     }
 
@@ -40,6 +49,6 @@ public class BankService {
      * @return the user's balance.
      */
     public double getBalance(){
-        return 0;
+        return this.balance;
     }
 }

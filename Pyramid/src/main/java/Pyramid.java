@@ -32,11 +32,11 @@ public class Pyramid {
 
             for(int j=0;j<=i; j++){
                 
-               System.out.println();
+               System.out.print(ast);
             }
-            System.out.print(ast);
+            System.out.print(" ");
         }
-       return ast;
+       return " ";
     }
    
 }

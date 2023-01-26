@@ -15,18 +15,15 @@ public class CombineArrays {
      * @return an array containing the contents of arr1 followed by the contents of arr2.
      */
     public int[] combine(int[] arr1, int[] arr2){
-        List<Integer> al= new ArrayList<Integer>();
-        
-        for (int i = 0; i < arr1.length; i++)
-            al.add(arr1[i]);
-            for (int j = 0; j < arr2.length; j++)
-            al.add(arr2[j]);
-            Integer[] arr = new Integer[al.size()];
-  
-       
-        for (int i = 0; i < al.size(); i++)
-            arr[i] = al.get(i);
-
-        return int(arr);
+        int l= arr1.length+arr2.length;
+        int[] al= new int[l];
+        for(int i=0;i< arr1.length;i++){
+            al[i]=arr1[i];
+        }
+        for(int j=0;j< arr2.length;j++){
+            al[arr1.length+j]=arr2[j];
+        }
+        return al;
     }
-}
+    }
+

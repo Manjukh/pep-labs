@@ -1,9 +1,10 @@
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
 import javax.print.attribute.IntegerSyntax;
+
 
 public class CombineArrays {
     /**
@@ -18,7 +19,14 @@ public class CombineArrays {
         
         for (int i = 0; i < arr1.length; i++)
             al.add(arr1[i]);
+            for (int j = 0; j < arr2.length; j++)
+            al.add(arr2[j]);
+            Integer[] arr = new Integer[al.size()];
+  
+       
+        for (int i = 0; i < al.size(); i++)
+            arr[i] = al.get(i);
 
-        return null;
+        return int(arr);
     }
 }

@@ -54,7 +54,7 @@ public class BookService {
      */
     public Book addBook(Book book) {
        
-       
+       book.getIsbn()
         
         return bookDAO.insertBook(book);
 

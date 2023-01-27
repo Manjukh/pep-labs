@@ -40,18 +40,20 @@ public class BookService {
      * @return all books.
      */
     public List<Book> getAllBooks() {
-        return null;
+        return bookDAO.getAllBooks();
     }
     /**
      * TODO: Use the bookDAO to persist a book to the database.
      * An ISBN will be provided in Book. Method should check if the book ISBN already exists before it attempts to
      * persist it.
      * @param book a book object.
+     * @param isbn 
      * @return book if it was successfully persisted, null if it was not successfully persisted (eg if the book primary
      * key was already in use.)
      */
     public Book addBook(Book book) {
-
+        
+        
         return null;
     }
     /**

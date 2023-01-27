@@ -777,8 +777,8 @@
     :count_tests: 2
     :count_tests_passed: 2
     :tests:
-      pyramidTest1: 0
-      pyramidTest2: 0
+      pyramidTest1: 1
+      pyramidTest2: 1
       getBookByIsbnTest: 0
       addBookVerifyNullOnUnsuccessfulAdd: 1
       addAuthorTest: 0

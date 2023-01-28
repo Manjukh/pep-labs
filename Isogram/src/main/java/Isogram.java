@@ -16,13 +16,18 @@ public class Isogram {
     public boolean isIsogram(String str){
         char[] char1=str.toCharArray();
         Arrays.sort(char1);
+       boolean b=false;
         int key=0;
+        while(key<char1.length){
        int result=Arrays.binarySearch(char1,char1[key]);
+       
        if(result <0)
-       return true;
+       b=true;
 
-       else
-        
-        return false;
+       else if(result>0)
+        b=false;
+        key++;
+          }  
+          return b;
     }
 }

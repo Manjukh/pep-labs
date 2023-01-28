@@ -1,5 +1,4 @@
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Arrays;
 
 public class Isogram {
     /**
@@ -15,19 +14,15 @@ public class Isogram {
      * @return true if str is an isogram, false otherwise.
      */
     public boolean isIsogram(String str){
-        char[] char1= str.toCharArray();
-        for(int i=0;i<char1.length; i++){
-            for (int j=1;j<char1.length;j++){
-                if(char1[i]==char1[j])
-                return false;
-                else if(char1[i]!=char1[j])
-                return true;
-                
-            }
-            
-        }
-        return false;
-    
+        char[] char1=str.toCharArray();
+        Arrays.sort(char1);
+        int key=0;
+       int result=Arrays.binarySearch(char1,char1[key]);
+       if(result <0)
+       return true;
+
+       else
         
+        return false;
     }
 }

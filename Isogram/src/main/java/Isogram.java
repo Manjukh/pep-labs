@@ -22,10 +22,10 @@ public class Isogram {
 
         for(int i=0;i<char1.length;i++){
             for(int j=i+1;j<char1.length;j++){
-                if(char1[i]==char1[j])
-                b=false;
-                else
+                if(char1[i]!=char1[j])
                 b=true;
+                else
+                b=false;
             }
             
         }

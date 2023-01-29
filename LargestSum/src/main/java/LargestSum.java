@@ -19,14 +19,16 @@ public class LargestSum {
         int max=0;
         
         for(int i=0;i<nums.size();i++){
-            for(int j=1;j<nums.size();j++){
-                sum=nums.get(i)+ nums.get(j);
+            int temp=nums.get(i);
+            for(int j=i+1;j<=nums.size()-1  ;j++){
+               int temp1=  nums.get(j);
+               sum=temp+temp1;
                 numsSum.add(sum);
-            }
+          }  
         }
         Iterator itr=numsSum.iterator();
         while(itr.hasNext()){ 
-         itr.next();
+        Object o= (itr.next());
           max=Collections.max(numsSum);
                
         } 

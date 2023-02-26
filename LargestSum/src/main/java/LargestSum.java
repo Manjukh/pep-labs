@@ -13,26 +13,25 @@ public class LargestSum {
      * @return the largest possible sum of separate numbers from nums.
      */
     public int bigSum(List<Integer> nums){
-        nums=new ArrayList<Integer>();
-      List<Integer>  numsSum =  new ArrayList<Integer>();
-        int sum=0;
-        int max=0;
-        
-        for(int i=0;i<nums.size();i++){
-            int temp=nums.get(i);
-            for(int j=i+1;j<=nums.size()-1  ;j++){
-               int temp1=  nums.get(j);
-               sum=temp+temp1;
-                numsSum.add(sum);
-          }  
-        }
-        Iterator itr=numsSum.iterator();
-        while(itr.hasNext()){ 
-        Object o= (itr.next());
-          max=Collections.max(numsSum);
-               
-        } 
-        return max;      
-    }
-
-}
+      List<Integer> nums2=new ArrayList<Integer>(nums);
+      
+      int sum=0;
+      int temp1=0;
+      int temp2=0;
+      int temp3=0;
+      int max=0;
+      temp1=Collections.max(nums2);
+      System.out.println("temp1"+temp1);
+      temp3=temp1;
+      System.out.println("temp3"+temp3);
+     int index=nums2.indexOf(temp1);
+      temp3=temp1;
+     System.out.println("index"+index);
+     nums2.set(index,0);
+      temp2=Collections.max(nums2);
+      System.out.println("temp2"+temp2);
+      sum=temp3+temp2;
+System.out.println("sum"+sum);
+return sum;
+   
+}}
